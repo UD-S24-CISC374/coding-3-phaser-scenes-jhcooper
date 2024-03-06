@@ -1,8 +1,9 @@
 import Phaser from "phaser";
+import { CONFIG } from "../config";
 
 export default class PreloadScene extends Phaser.Scene {
     constructor() {
-        super({ key: "PreloadScene" });
+        super({ key: CONFIG.SCENES.PreloadScene });
     }
 
     preload() {
@@ -10,6 +11,6 @@ export default class PreloadScene extends Phaser.Scene {
     }
 
     create() {
-        this.scene.start("MainScene");
+        this.scene.start(CONFIG.SCENES.MainScene);
     }
 }
